@@ -1,5 +1,7 @@
 <?php require __DIR__ . '/../header.php'; ?>
 
+
+
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
         <img src="/assets/images/logo-votit.png" class="d-block mx-lg-auto img-fluid" alt="Logo VotIt" width="400" height="500" loading="lazy">
@@ -16,8 +18,13 @@
 <div class="row text-center">
     <h2>Les derniers sondages :</h2>
     <div class="row">
-        <?php include __DIR__ . '/../poll/poll_part.php';
-        ?>
+        <?php if (!empty($polls)) {
+            foreach ($polls as $poll) {
+                include __DIR__ . '/../poll/poll_part.php';
+            }
+        } else {
+            echo '<p class="mt-3">Aucun sondage disponible pour le moment.</p>';
+        } ?>
     </div>
 </div>
 

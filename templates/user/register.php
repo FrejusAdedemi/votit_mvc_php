@@ -9,7 +9,7 @@
         <?php endforeach; ?>
       </div>
     <?php endif; ?>
-    <form method="post" action="/register">
+    <form method="post" action="/register/">
       <div class="mb-3">
         <label for="nickname" class="form-label">Nom d'utilisateur</label>
         <input type="text" class="form-control" id="nickname" name="nickname" required>

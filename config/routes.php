@@ -2,6 +2,8 @@
 return [
     "/" => ["controller" => "App\\Controller\\PageController", "action" => "home"],
     "/about/" => ["controller" => "App\\Controller\\PageController", "action" => "about"],
+    "/category/list/" => ["controller" => "App\\Controller\\CategoryController", "action" => "list"],
+    "/category/" => ["controller" => "App\\Controller\\CategoryController", "action" => "show"],
     "/poll/create/" => ["controller" => "App\\Controller\\PollController", "action" => "create"],
     "/poll/create/post/" => ["controller" => "App\\Controller\\PollController", "action" => "createPost"],
     "/poll/" => ["controller" => "App\\Controller\\PollController", "action" => "show"],

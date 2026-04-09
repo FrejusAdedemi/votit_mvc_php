@@ -5,7 +5,7 @@
     <?php if (!empty($error)): ?>
       <div class="alert alert-danger"> <?= htmlspecialchars($error) ?> </div>
     <?php endif; ?>
-    <form method="post" action="/login">
+    <form method="post" action="/login/">
       <div class="mb-3">
         <label for="nickname" class="form-label">Nom d'utilisateur</label>
         <input type="text" class="form-control" id="nickname" name="nickname" required>

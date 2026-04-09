@@ -1,6 +1,11 @@
 <?php require __DIR__ . '/../header.php'; ?>
 <h2>Créer un sondage</h2>
-<form method="post" action="/poll/create">
+<?php if (!empty($error)) { ?>
+  <div class="alert alert-danger" role="alert">
+    <?= htmlspecialchars($error) ?>
+  </div>
+<?php } ?>
+<form method="post" action="/poll/create/">
   <div class="mb-3">
     <label for="title" class="form-label">Titre</label>
     <input type="text" class="form-control" id="title" name="title" required>

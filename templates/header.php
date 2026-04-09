@@ -1,6 +1,8 @@
 <?php
     $mainMenu = [
         '/' => 'Accueil',
+        '/about' => 'À propos',
+        '/category/list' => 'Catégories',
         '/poll/list' => 'Listes des sondages',
         '/poll/create' => 'Créer un sondage',
     ];
@@ -27,7 +29,7 @@
         <ul class="nav nav-pills">
             <?php foreach ($mainMenu as $page => $titre) { ?>
                 <li class="nav-item">
-                    <a href="<?= $page; ?>" class="nav-link<?php if ($_SERVER['REQUEST_URI'] === $page) { echo ' active'; } ?>"><?= $titre; ?></a>
+                    <a href="<?= $page; ?>" class="nav-link<?php if (rtrim($_SERVER['REQUEST_URI'], '/') === rtrim($page, '/')) { echo ' active'; } ?>"><?= $titre; ?></a>
                 </li>
             <?php } ?>  
         </ul>

@@ -49,5 +49,5 @@
     </div>
   </div>
 </div>
-<a href="/" class="btn btn-secondary mt-4">Retour à la liste</a>
+<a href="/poll/list/" class="btn btn-secondary mt-4">Retour à la liste</a>
 <?php require __DIR__ . '/../footer.php'; ?>
